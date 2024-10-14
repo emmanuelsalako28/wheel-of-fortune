@@ -1,0 +1,800 @@
+<style>
+    body {
+        margin: 0;
+    }
+
+    .--main-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background: #BC74E0;
+    }
+
+    .--row {
+        width: 100%;
+        position: relative;
+        display: block;
+        ;
+        background: #BC74E0;
+    }
+
+    .header-bg {
+        position: relative;
+    }
+
+    .header-bg img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .-header {
+        display: flex;
+        z-index: 1;
+    }
+
+    .-logo {
+        width: 15%;
+        margin: 6% 6% 0 0;
+    }
+
+    .-slogan {
+        width: 42%;
+        margin-right: 6%;
+    }
+
+    .-slogan img {
+        margin-top: 26%;
+    }
+
+    .-live-section {
+        margin: 0 auto;
+        width: 98%;
+        position: relative;
+        margin-top: -4.5%;
+    }
+
+    .main-image {
+        position: absolute;
+        width: 100%;
+    }
+
+    .video-image {
+        width: 100%;
+    }
+
+    .main-image img,
+    .video-image {
+        width: 100%;
+    }
+
+    .social-links {
+        display: flex;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 15%;
+        direction: ltr;
+    }
+
+    .social-links a:first-of-type {
+        margin-right: 5px;
+    }
+
+    .social-links a {
+        display: block;
+    }
+
+    .social-links a img {
+        width: 100%;
+    }
+
+    .-giveawayes {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .-giveawayes>div {
+        width: 23.5%;
+        margin-right: 2%;
+        padding: .1em;
+        z-index: 2;
+        background-image: linear-gradient(180deg, black 21%, #ff333d, #ffcf08);
+        border-radius: 5px;
+    }
+
+    .-giveawayes>div:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .-giveawayes>div>div {
+        background: black;
+    }
+
+    .-giveawayes>div>div:last-of-type {
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+    }
+
+    .-giveawayes>div p {
+        padding: 3px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 900;
+        color: white;
+    }
+
+    .-giveawayes>div>div>img {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .-giveawyes-title {
+        width: 100%;
+        margin: 0 auto;
+        padding: 8px 9px;
+    }
+
+    .footer-bg {
+        overflow: hidden;
+    }
+
+    .footer-bg img {
+        width: 120%;
+        margin-left: -10%;
+        max-width: 1000%;
+    }
+
+    .video-bg1 {
+        position: absolute;
+        top: 5%;
+        left: 57%;
+        width: 65% !important;
+    }
+
+    .video-bg2 {
+        position: absolute;
+        top: 51%;
+        left: 5%;
+        width: 79% !important;
+        opacity: 0.8;
+    }
+
+    .-giveawyes-title h1 {
+        width: 100%;
+        color: #000000;
+        margin: 0;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 2px 13px;
+        text-align: left;
+    }
+
+    .t-c {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 25px;
+        border-radius: 22px;
+    }
+
+    .t-c ul {
+        color: #000000;
+        font-size: 13px;
+        padding-bottom: 12px;
+    }
+
+    .t-c ul li {
+        margin-bottom: 5px;
+    }
+
+    .download-app {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        margin: 40px 0;
+    }
+
+    .download-app:hover,
+    .download-app:visited {
+        color: #000000;
+    }
+
+    .countdown-container {
+        display: flex;
+        font-size: 5vw;
+        color: #ffffff;
+        width: 90%;
+        margin: 65px auto 6px auto;
+    }
+
+    .countdown {
+        display: flex;
+        width: 65%;
+        text-align: center;
+    }
+
+    .countdown>div {
+        width: 33%;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .-text {
+        font-size: 3vw;
+        position: absolute !important;
+        top: -5vw;
+        width: 100% !important;
+    }
+
+    .num {
+        background: #e6e7e8;
+        border: 2px solid #1b1666;
+        border-radius: 7px;
+        margin: 2px 10px;
+        color: black;
+        text-align: center;
+    }
+
+    .countdown-text {
+        width: 35%;
+        text-align: center;
+    }
+
+    .countdown-text>p {
+        margin-top: 5px;
+    }
+
+    .d-app {
+        width: 75%;
+        margin: 0 auto;
+        font-size: 5vw;
+        color: #ffffff;
+        text-align: center;
+        display: none;
+    }
+
+    .d-app>p {
+        width: 100%;
+        margin: 2vw 0;
+    }
+
+    .d-app>a {
+        width: 60%;
+        display: block;
+        margin: 0 20%;
+    }
+
+    .d-app>a>img {
+        width: 100%;
+    }
+
+    .d-app2 {
+        width: 69%;
+        margin: 0 auto 13%;
+        font-size: 5vw;
+        color: #dc0233;
+        text-align: center;
+        display: none;
+    }
+
+    .d-app2>p {
+        width: 100%;
+        padding-top: 6px;
+        margin: 5% 0;
+    }
+
+    .d-app2>a {
+        width: 80%;
+        display: block;
+        margin: 0 10%;
+    }
+
+    .d-app2>a>img {
+        width: 100%;
+        display: block;
+    }
+
+    .game-container {
+        position: relative;
+        width: 75%;
+        margin: 3% auto 18% auto;
+    }
+
+    .-app-only-text {
+        font-size: 5vw;
+        color: white;
+        width: fit-content;
+        border-radius: 10px;
+        margin: 10% auto 4%;
+        padding: 5px 22px;
+    }
+
+    .-row-2 {
+        width: 100%;
+        position: relative;
+        margin-bottom: 35px;
+    }
+
+    .-row-2>div {
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .-row-2>div>button {
+        font-size: 4vw;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background: #6ac0d5;
+        padding: 7px 20px;
+        margin: 2vw;
+        padding: 20px 58px;
+        box-shadow: 5px 10px 18px;
+    }
+
+
+    .popup-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #00000080;
+        z-index: 22;
+        display: none;
+        margin: 0;
+        height: 100%;
+    }
+
+    .popup-container::after {
+        content: 'âœ–';
+        color: white;
+        position: absolute;
+        z-index: 100;
+        top: 2%;
+        right: 9%;
+        font-size: 24px;
+    }
+
+    #app-m {
+        display: none;
+    }
+
+    .-giveawyes-title2 h1 {
+        width: fit-content;
+        color: #ff9400;
+        margin: 0;
+        font-size: 5vw;
+        padding: 2px 5px;
+    }
+
+    .t-c-2 .-giveawyes-title2 {
+        width: 86%;
+        margin: 0 auto;
+        padding: 8px 9px;
+        border: 1px solid #fffff5;
+        border-radius: 16px;
+        margin-top: -41px;
+        background: #fffff5;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .t-c-2 ul li::before {
+        content: "\2022";
+        color: #ff9900;
+        font-weight: bold;
+
+        width: 1em;
+
+    }
+
+    .t-c-2 {
+        margin: 0 auto;
+        margin-top: 60px;
+        border: 1px solid #ff9900;
+        border-radius: 16px;
+        width: 90%;
+    }
+
+    .t-c-2 h2 {
+        color: white;
+        font-size: 25px;
+    }
+
+    .t-c-2 ul {
+        color: #000000;
+        font-size: 4.2vw;
+
+        margin: 15px 20px;
+        padding: 0;
+    }
+
+    .t-c-2 ul li {
+        margin-bottom: 6px;
+    }
+
+    .t-c {
+        margin-right: 20px;
+        margin-top: 25px;
+    }
+
+    .t-c h2 {
+        color: #ff9900;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .t-c ul {
+        color: #ffffff;
+        font-size: 4.2vw;
+    }
+</style>
+
+<div class="--main-container">
+    <div class="--main-container-bg">
+        <div class="--row">
+            <div class="header-bg" style="margin: 0 auto;"><img
+                    src="https://ng.jumia.is/cms/0-5-brand-festival/2024/live-now-banner/712x384_LIVE-BANNER.gif"
+                    alt="" /></div>
+            <div class="countdown-container" id="count-1" style="display:none;">
+                <div class="countdown-text">
+                    <p>Ends in</p>
+                </div>
+                <div class="countdown" id="timer">
+                    <div>
+                        <div class="-text" id="text-1">Day</div>
+                        <div class="num" id="num-1">9</div>
+                    </div>
+                    <div>
+                        <div class="-text" id="text-2">Hours</div>
+                        <div class="num" id="num-1">14</div>
+                    </div>
+                    <div>
+                        <div class="-text" id="text-3">Mins</div>
+                        <div class="num" id="num-1">60</div>
+                    </div>
+                    <div>
+                        <div class="-text" id="text-3">Secs</div>
+                        <div class="num" id="num-1">10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-app" id="count-2" style="display:none;">
+
+            </div>
+
+            <div class="game-container" id="app-m">
+                <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/RDF.png" alt=""
+                    style="position: absolute;width: 100%;z-index: 3;" />
+                <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Wheel_star-2.png" alt=""
+                    style="position: absolute;top: 3%;left: 3%;width: 94%;z-index: 4;" />
+                <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Artboard_1_copy_14.png"
+                    alt="" style="position: absolute;top: 86%;left: -2%;z-index: 0;width: 100%;" />
+                <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Wheel_EN_2.png" alt=""
+                    style="position: absolute;top: 0%;left: 0%;z-index: 5;" />
+                <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Wheel_EN_2.png" alt=""
+                    style="visibility: hidden;" />
+
+            </div>
+
+            <script type="text/javascript"
+                src="https://jumia.co/nl-templates-egypt/uploads/201909/jumia-sizzlejs-110919.js"></script>
+            <style>
+                .play-button button {
+                    display: block;
+                    margin: 12vw auto 0 auto;
+                    border: none;
+                    background: transparent;
+                    width: 35vw;
+                    padding: 0;
+                }
+
+                .play-button button img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .play-button span {
+                    display: block;
+                    text-align: center;
+                    width: 90%;
+                    margin: 2vw auto 0 auto;
+                    color: white;
+                    font-size: 4vw;
+                    font-weight: 500;
+                }
+
+                .play-button {
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 22;
+                    display: none;
+                    background: #00000047;
+                }
+
+                .image-wheel {
+                    -webkit-animation: spin 4s linear infinite;
+                    -moz-animation: spin 4s linear infinite;
+                    animation: spin 4s linear infinite;
+                }
+
+                .wheel-container {
+                    width: 100%;
+                    position: relative;
+                    margin: 20px 0;
+                    margin-bottom: 26vw;
+                    z-index: 1;
+                }
+
+                .wheel-box {
+                    width: 75%;
+                    margin: 0 auto;
+                    position: relative;
+                }
+
+                .wheel-container img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .spin-container {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                }
+
+                .wheel {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: -1;
+                    transition: 6.5s;
+                    transition-timing-function: ease-out;
+                }
+
+                #spin-now {
+                    background: url(https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Wheel_Vector_3.png) !important;
+                    border: none !important;
+                    background-color: transparent !important;
+                    height: 100% !important;
+                    width: 100% !important;
+                    background-size: contain !important;
+                    pointer-events: none;
+                }
+
+                #spin-now:hover,
+                #spin-now:active,
+                #spin-now:visited,
+                #spin-now:focus,
+                #spin-now:focus-within {
+                    border: none;
+                    background: none;
+                }
+
+                @-moz-keyframes spin {
+                    100% {
+                        -moz-transform: rotate(360deg);
+                    }
+                }
+
+                @-webkit-keyframes spin {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes spin {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+            </style>
+
+            <div class="play-button" id="splash-screen" style="">
+                <div style="width: 80%;position: absolute;top: 47vw;margin: 0 10%;"><a
+                        href="https://www.jumia.com.ng/mlp-jumia-festival/" target="_blank" style="display: block;">
+                        <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/3.png"
+                            style="width: 100%;" alt="" id="gift-result" /></a>
+                    <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/popup-bg-2.png"
+                        style="width: 120%;position: absolute;top: -5%;left: -10%;z-index: -1;max-width: 200%;opacity: 0.7;filter: grayscale(100%);"
+                        alt="" class="image-wheel" />
+                </div>
+            </div>
+
+
+            <div class="play-button" id="splash-screen-lost" style="">
+                <div style="width: 52%;position: absolute;top: 47vw;margin: 0 24%;"><a
+                        href="https://www.jumia.com.ng/mlp-jumia-festival/" style="display: block;"> <img
+                            src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Perdu-1-1.png"
+                            style="width: 100%;" alt="" id="gift-result" /></a>
+                    <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/popup-bg-2.png"
+                        style="width: 120%;position: absolute;top: -5%;left: -10%;z-index: -1;max-width: 200%;opacity: 0.7;filter: grayscale(100%);"
+                        alt="" class="image-wheel" />
+                </div>
+            </div>
+
+
+            <div class="wheel-container" id="wheel-show">
+                <div class="wheel-box">
+                    <img class="wheel"
+                        src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/TN-Ram23_Roue-1.png"
+                        alt="" />
+                    <img class="wheel-fram"
+                        src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/TN-Ram22_Artboard2.png"
+                        alt="" style="width: 100%;max-width: 200%;" />
+                    <div class="spin-container">
+                        <button id="spin-now"> </button>
+                    </div>
+                </div>
+                <img src="https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/TN-Ram22_Artboard.png"
+                    style="position: absolute;top: 85%;width: 75%;left: 11.5%;z-index: -1111;" alt="" />
+            </div>
+            <script>
+                $(function () {
+                    var degrees = 0;
+                    var timesRun = 0;
+                    var minNumber = 1000;
+                    var maxNumber = 1500;
+                    var endtime = randomNumberFromRange(minNumber, maxNumber);
+                    var final_deg = endtime * 4;
+
+                    function randomNumberFromRange(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
+                    function show_popup() {
+                        var turnes = final_deg / 360;
+                        var final_res = final_deg - (Math.floor(turnes) * 360);
+
+                        var status = "";
+                        gift1 = "https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/6.jpg";
+                        gift2 = "https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/6.jpg";
+                        gift3 = "https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/6.jpg";
+                        giftlost = "https://ng.jumia.is/cms/0-5-brand-festival/2024/games/spin-wheel/Perdu-1-1.png";
+
+
+                        if (0 <= final_res && final_res < 30) { document.getElementById("gift-result").src = gift1; status = "win"; }
+                        else if (330 <= final_res && final_res <= 359) { document.getElementById("gift-result").src = gift1; status = "win"; }
+                        else if (30 <= final_res && final_res < 90) { document.getElementById("gift-result").src = giftlost; status = "lost"; }
+                        else if (90 <= final_res && final_res < 150) { document.getElementById("gift-result").src = gift3; status = "win"; }
+                        else if (150 <= final_res && final_res < 210) { document.getElementById("gift-result").src = giftlost; status = "lost"; }
+                        else if (210 <= final_res && final_res < 270) { document.getElementById("gift-result").src = gift2; status = "win"; }
+                        else if (270 <= final_res && final_res < 330) { document.getElementById("gift-result").src = giftlost; status = "lost"; }
+
+
+                        if (status === "win") { document.getElementById("splash-screen").style.display = "block"; }
+
+                        if (status === "lost") { document.getElementById("splash-screen-lost").style.display = "block"; }
+                    }
+
+                    $("#spin-now").click(function () {
+                        window.st = setInterval(function () {
+                            degrees += 4;
+                            timesRun += 1;
+                            $('#spin-now').css('pointer-events', 'none');
+                            $('#spin-now').css('filter', 'contrast(0.7)');
+                            $(".wheel").css({
+                                '-webkit-transform': 'rotate(' + degrees + 'deg)',
+                                '-moz-transform': 'rotate(' + degrees + 'deg)',
+                                '-ms-transform': 'rotate(' + degrees + 'deg)',
+                                'transform': 'rotate(' + degrees + 'deg)'
+                            });
+                            if (timesRun === endtime) {
+                                clearInterval(window.st);
+                                setTimeout(function () { show_popup(); }, 6600);
+                            }
+                        }, 1);
+                    });
+                });
+            </script>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="--row">
+        <div class="t-c-2">
+            <div class="-giveawyes-title2">
+                <h1>How to win in the game Wheel of Fortune</h1>
+            </div>
+            <ul>
+                <li>Click on the star.</li>
+                <li>Spin the wheel for a chance to win a voucher.</li>
+                <li>Every day a gift to win</li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="--row">
+        <div class="t-c-2">
+            <div class="-giveawyes-title2">
+                <center>
+                    <h1>Competition games</h1>
+                </center>
+            </div>
+            <ul>
+
+                <li>Jumia employees are not eligible to participate.</li>
+                <li>The winner agrees to have their photo published on Jumia social networks.</li>
+                <li>As part of the various Jumia competitions (Social networks, Treasure hunts, Buzzer
+                    Game, etc.), it is not allowed to win more than once per quarter.</li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+    function Hide(section) {
+
+        document.getElementById(section).style.display = "none";
+    }
+
+    function diplay(section) {
+        document.getElementById(section).style.display = "Block";
+    }
+</script>
+
+
+<script>
+    var countDownDate = new Date("february 20, 2021 23:59:59").getTime();
+
+    var x = setInterval(function () {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = "<div><div class=\"-text\" id=\"text-1\" >Day</div><div class=\"num\" id=\"num-1\" >" + days + "</div></div><div><div class=\"-text\" id=\"text-2\" >Hours</div><div class=\"num\" id=\"num-1\" >" + hours + "</div></div><div><div class=\"-text\" id=\"text-3\" >Mins</div><div class=\"num\" id=\"num-1\" >" + minutes + "</div></div><div><div class=\"-text\" id=\"text-3\" >Secs</div><div class=\"num\" id=\"num-1\" >" + seconds + "</div></div>";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("count-1").style.display = "none";
+            document.getElementById("spin-now").style.pointerEvents = "visible";
+            document.getElementById("count-2").style.display = "none";
+        }
+    }, 1000);
+
+</script>
